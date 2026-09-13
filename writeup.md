@@ -99,7 +99,14 @@ when we have set the max_depth to 3 ( gap reduces to 0.20 from 0.36). This shows
 overfitting.
 
 6. Random forest (Item 4.5) 
-Not yet started
+    1. Changing best_split() and DecisionTree to include an parameter max_features, so it can be used to pick a random subset for looping over feature_indices instead of all the columns to implement random forest
+    2. Created decisionTree.py so it is easier to import ( just copied the code of decisionTree.ipynb)
+    3. Wrote the code for randomForest, which is basically multiple decisionTree running along random splits of the same data ( bootstrap sampling ). This gives us series of outputs, which we take majority vote out of to return the best possible output.
+    4. Tested the randomForest code
+
+
+
+
 7. Comparison against sklearn (Item 4.6) 
 Not yet started
 8. Single tree vs random forest (Item 4.7) 
