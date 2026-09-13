@@ -85,9 +85,19 @@ tree achieves 95.8% train accuracy and 100% test accuracy, and the printed tree 
 width, which lines up with known facts about how Iris species are visually distinguished.
 
 4. Overfitting demonstration (Item 4.3)
-Not yet started
+
+Used sklearn's make_classification to create noisy dataset, which is used to train our algorithm
+with max depth set to None. The results show that on testing data, the accuracy is only 63.3%
+
+
 5. Regularization (Item 4.4)
-Not yet started
+
+To check the importance of setting a stopping condition, I checked the model on the same noisy dataset 
+once with max_depth set to None and in one with max_depth set to 3. When we check the gap between the test
+and train data, to compare consistency, we can see that the model is more consistent in the second case 
+when we have set the max_depth to 3 ( gap reduces to 0.20 from 0.36). This shows that regularization reduces
+overfitting.
+
 6. Random forest (Item 4.5) 
 Not yet started
 7. Comparison against sklearn (Item 4.6) 
